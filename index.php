@@ -33,8 +33,9 @@ if (count($route) <= 1) {
   $info = new DeviceDetector($userAgent);
   $info->parse();
 
-  $geoip = new Reader('./db/GeoLite2-Country.mmdb');
+  $reader = new Reader('./db/GeoLite2-Country.mmdb');
   $ip = getUserIP();
+  $geoip = $reader->country($ip);
 
   $response = array(
     'ip' => $ip,
