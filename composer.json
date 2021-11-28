@@ -1,6 +1,9 @@
 {
+    "name": "user-info",
+    "description": "API endpoint to get user IP, country, and browser information",
     "require": {
         "matomo/device-detector": "^4.3",
         "geoip2/geoip2": "~2.0"
-    }
+    },
+    "license": "MIT"
 }
