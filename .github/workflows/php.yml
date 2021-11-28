@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
     - name: Copy repository contents
       uses: appleboy/scp-action@master
       env:
